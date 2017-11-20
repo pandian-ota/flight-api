@@ -1,6 +1,8 @@
 package com.travix.medusa.busyflights.domain.crazyair;
 
-public class CrazyAirResponse {
+import java.io.Serializable;
+
+public class CrazyAirResponse implements Serializable {
 
     private String airline;
     private double price;
@@ -9,6 +11,19 @@ public class CrazyAirResponse {
     private String destinationAirportCode;
     private String departureDate;
     private String arrivalDate;
+
+    public CrazyAirResponse() {
+    }
+
+    public CrazyAirResponse(String airline, double price, String cabinclass, String departureAirportCode, String destinationAirportCode, String departureDate, String arrivalDate) {
+        this.airline = airline;
+        this.price = price;
+        this.cabinclass = cabinclass;
+        this.departureAirportCode = departureAirportCode;
+        this.destinationAirportCode = destinationAirportCode;
+        this.departureDate = departureDate;
+        this.arrivalDate = arrivalDate;
+    }
 
     public String getAirline() {
         return airline;

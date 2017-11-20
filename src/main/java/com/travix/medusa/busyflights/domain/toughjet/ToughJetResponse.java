@@ -1,6 +1,8 @@
 package com.travix.medusa.busyflights.domain.toughjet;
 
-public class ToughJetResponse {
+import java.io.Serializable;
+
+public class ToughJetResponse implements Serializable {
 
     private String carrier;
     private double basePrice;
@@ -10,6 +12,20 @@ public class ToughJetResponse {
     private String arrivalAirportName;
     private String outboundDateTime;
     private String inboundDateTime;
+
+    public ToughJetResponse() {
+    }
+
+    public ToughJetResponse(String carrier, double basePrice, double tax, double discount, String departureAirportName, String arrivalAirportName, String outboundDateTime, String inboundDateTime) {
+        this.carrier = carrier;
+        this.basePrice = basePrice;
+        this.tax = tax;
+        this.discount = discount;
+        this.departureAirportName = departureAirportName;
+        this.arrivalAirportName = arrivalAirportName;
+        this.outboundDateTime = outboundDateTime;
+        this.inboundDateTime = inboundDateTime;
+    }
 
     public String getCarrier() {
         return carrier;

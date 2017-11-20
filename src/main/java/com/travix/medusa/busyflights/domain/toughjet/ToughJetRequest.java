@@ -8,6 +8,14 @@ public class ToughJetRequest {
     private String inboundDate;
     private int numberOfAdults;
 
+    public ToughJetRequest(String from, String to, String outboundDate, String inboundDate, int numberOfAdults) {
+        this.from = from;
+        this.to = to;
+        this.outboundDate = outboundDate;
+        this.inboundDate = inboundDate;
+        this.numberOfAdults = numberOfAdults;
+    }
+
     public String getFrom() {
         return from;
     }

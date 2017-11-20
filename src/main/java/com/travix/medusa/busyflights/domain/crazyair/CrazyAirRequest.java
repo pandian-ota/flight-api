@@ -8,6 +8,14 @@ public class CrazyAirRequest {
     private String returnDate;
     private int passengerCount;
 
+    public CrazyAirRequest(String origin, String destination, String departureDate, String returnDate, int passengerCount) {
+        this.origin = origin;
+        this.destination = destination;
+        this.departureDate = departureDate;
+        this.returnDate = returnDate;
+        this.passengerCount = passengerCount;
+    }
+
     public String getOrigin() {
         return origin;
     }
